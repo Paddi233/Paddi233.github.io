@@ -1,44 +1,162 @@
-<! DOCTYPE html >
-<head >
-  <meta charset -" UTF -8">
-  <meta http - equiv =" X - UA - Compatible " content -" IE - edge ">
-  <meta name -" viewport " content =" width - device - width , initial - scale -1.0">
-  <title>全栈web前端技术列表</title>
-  <link rel ="stylesheet" href ="index.css">
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度新闻</title>
+    <style type="text/css">
+      .newsbox{
+          width: 985px;
+          margin: auto;
+      }
+      .titlebox{
+          height: auto;
+          border-top: 2px solid grey;
+          border-bottom: 1px solid grey;
+      }
+      .titlebox>h1{
+          margin: 0;
+          padding: 10px 0px;
+          font-size: 20px;
+          color:#1d1d6d;
+          line-height: 20px;
+          background-image: url(img/icon-mark.png);
+          background-repeat: no-repeat;
+          background-position: 175px 19px;
+      }
+      .titlebox>h1>.titleEN{
+          font-size: 14px;
+          font-weight: normal;
+          color:grey;
+      }
+      .leftbox{
+          width: 385px;
+          float: left;
+      }
+      .leftbox>ul{
+          margin: 15px 0px 0px 0px;
+          padding-left: 0px;
+          list-style-type: square;
+          list-style-position: inside;
+          font-size: 12px;
+      }
+      .leftbox>ul>li{
+          padding: 5px 0px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+      .leftbox>ul>li>a{
+          color:black;
+          text-decoration: none;
+          font-size: 14px;
+      }
+      .leftbox>ul>li>a:hover{
+           color:blue;
+           text-decoration: underline;
+      }
+      .leftbox>ul>li:first-child{
+          font-size: 16px;
+          color:red;
+      }
+      .leftbox>ul>li:first-child>a{
+          font-size: 16px;
+          font-weight: bold;
+      }
+      .centerbox{
+          width:240px;
+          float: left;
+          margin-left: 35px;
+      }
+      .rightbox{
+          width: 290px;
+          float: right;
+      }
+      .centerbox>h2,.rightbox>h2{
+          font-size: 16px;
+          color:#1d1d6d;
+          border-left:2px solid #1d1d6d;
+          padding: 0px 0px 0px 5px;
+          margin: 20px 0px 15px 0px;
+      }
+      .centerbox>.newspic>img{
+          width: 100%;
+      }
+      .centerbox>.newspic>a{
+          display: block;
+          background-color: gainsboro;
+          line-height: 20px;
+          font-size: 14px;
+          padding: 5px;
+          text-decoration: none;
+          color:black;
+          top:-5px;
+          position: relative;
+      }
+      .centerbox>.newspic>a:hover{
+          background-color: #1d1d77;
+          color:white;
+      }
+      .rightbox>ul{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+      .rightbox>ul>li{
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 3px 0px;
+      }
+      .rightbox>ul>li>a{
+          font-size: 14px;
+          text-decoration: none;
+          color:black;
+      }
+      .rightbox>ul>li>a:hover{
+          text-decoration: underline;
+          color:blue;
+      }
+    </style>
 </head>
-
 <body>
-  <h2>web前端技术列表（点击查看）</h2>
-  <hr size ="3" color ="#SE2D00" width ="750px">
-  <nav>
-    <a href ="#news1"> web 前端技术基础</a>
-    <a href ="#news2"> web 编程</a>
-    <a href ="#news3">移动应用开发</a>
-    <a href ="#news4">框架与项目管理</a>
-  </nav>
-  <hr size -"3" color -"#5E2D00" width -"750px">
-  <dl id ="news1">
-    <dt> web 前端技术基础</dt>
-    <dd>包含 html + css 基础知识、<em>DIV+CSS</em＞是重难点内容；同时还需要photoshop</ dd >
-    <dd>Photoshop处理以<em>像素构成的图像</em>，可以有效地进行图片编辑调整工作。</dd>
-  </dl>
-  <dl id -"news2">
-    <dt>web编程</dt>
-    <dd>javascript基础、jQuery和<em>项目实战：京东首页</em></ dd >
-    <dd>javascript面向对象、javasciipt高级特性、模块化组件开发和<em>MVC设计模式</em>。</dd>
-  </dl>
-  <dl id="news3">
-    <dt>移动应用开发</dt>
-    <dd>react+native、微信小程序开发和<em>实战项目：前端社区app</em>。</dd>
-    <dd>HTML5+CSS3、响应式原理与布局、Boostrap和<em>less + sass预处理</em>。</ dd >
-    <dd>微信weUI、VUX和实战项目：在线电影。</dd>
-  </dl>
-  <dl id ="news4">
-    <dt>框架与项目管理</dt>
-    <dd>框架是指当前用的比较多的如<em>Vue</em>和React等；项目管理利用合适的工具，</dd>
-    <dd>对已经做好的项目进行处理如<em>webpack、Git</em>等工具对项目进行打包处理。</dd>
-    <dd>项目实战：通用型后台管理系统开发。</dd>
-  </dl>
+    <div class="newsbox">
+        <div class="titlebox">
+            <h1><span >北京新闻</span><span class="titleEN">LOCAL NEWS</span></h1>
+        </div>
+        <div class="mainbox">
+            <div class="leftbox">
+                <ul>
+                    <li><a href="#">办了十几张出入证，送奶工进小区“无接触”送鲜奶鲜奶鲜奶</a></li>
+                    <li><a href="#">中潜股份暴涨推手：仰智慧及神秘私募北京泽盈</a></li>
+                    <li><a href="#">地铁三号线朝阳公园至石佛营段全面复工北京泽盈北京泽盈北京泽盈</a></li>
+                    <li><a href="#">全国首个！北京联通5G用户突破百万</a></li>
+                    <li><a href="#">解封、入境成12345咨询“热词”，权威答复来啦</a></li>
+                    <li><a href="#">北京新增境外输入新冠肺炎确诊病例1例 为英国输入</a></li>
+                    <li><a href="#">大连人注意！听到这5句话，马上挂电话</a></li>
+                    <li><a href="#">北京：滞留武汉返京人员需双重核酸检测</a></li>
+                </ul>
+            </div>
+            <div class="centerbox">
+                <h2>新闻图片</h2>
+                <div class="newspic">
+                    <img src="img/pic.jpg">
+                    <a href="#">海淀花园路街道拆除400平米违建</a>
+                </div>
+            </div>
+            <div class="rightbox">
+                <h2>新闻资讯</h2>
+                <ul>
+                    <li><a href="#">首发症状为非呼吸系统症状，且症状不典型！</a></li>
+                    <li><a href="#">复工记：又见钟书阁</a></li>
+                    <li><a href="#">别“飘”！疫情防控仍是持久战</a></li>
+                    <li><a href="#">东城区举行全民义务植树活动 龙潭中湖公园改造主</a></li>
+                    <li><a href="#">情报：深圳“网贷老赖”惩戒加码；持牌消费金融公</a></li>
+                    <li><a href="#">痛心！通州14岁女孩 凌晨坠楼</a></li>
+                    <li><a href="#">3月二手房成交量暴涨创新高？真实的情况是</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
